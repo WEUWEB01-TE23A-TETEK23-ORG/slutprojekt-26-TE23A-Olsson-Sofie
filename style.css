@@ -106,9 +106,56 @@ main {
     margin-top: 20px;
     background-color: pink;
 }
+main article {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        background: none;
+        position: static;
+        padding: 0;
+    }
+
+    main article.big {
+        display: grid;
+    }
+
+main .smallarticel{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+}
+main .smallarticel .small {
+    display: grid;
+    grid-template-rows: auto;
+    width: 120px;
+    margin: 10px;
+    
+}
+
+main .smallarticel article .text2 {
+    border: 2px solid black;
+    width: 110px;
+    margin: auto;
+    text-align: center;
+}
+main .smallarticel article .text2 a{
+    text-decoration: none;
+}
+main .smallarticel article .text2 a:hover {
+    text-decoration: underline;
+}
+
 main article img {
-    width: 180px;
-    height: 110px;
+    width: 110px;
+    height: 180px;
+    object-fit: cover; 
+    object-position: center;
+    margin: auto;
+}
+
+main article.big img {
+     width: 160px;
+    height: 230px;
+  
 }
 
 /* Aside */
