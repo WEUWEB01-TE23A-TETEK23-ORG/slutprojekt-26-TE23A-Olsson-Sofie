@@ -191,7 +191,8 @@ main article.big .big img {
 }
 main article.big .h2 {
     margin: 10px;
-    margin-left: 0%;
+    padding: 0%;
+    width: 80%;
 }
 main article.big .chapter {
     display: flex;
