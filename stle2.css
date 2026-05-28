@@ -19,6 +19,13 @@ img {
 body {
     background-color: #d9d6d6;
 }
+a {
+    text-decoration: none;
+    color: #111111;
+}
+a:visited {
+    color: #11111152;
+}
 /* mobil 0-767 */
 .sida {
     width: 95%;
@@ -27,12 +34,20 @@ body {
     max-width: 700px;
     margin-top:20px;
     padding: 15px;
-    background-color: #fff;
+    background-color: #f0efef;
     border-radius: 5px;
+    margin-bottom: 30px;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer";
 }
 
 /* Header */
 header {
+    grid-area: header;
     margin: auto;
 }
 header h1 {
@@ -51,6 +66,7 @@ header h1 {
     margin: auto;
     margin-top: 30px;
     border-radius: 10px;
+    border: rgba(0, 0, 0, 0.496) 1px solid;
 }
 
 .topnav a:hover, .topnav a.active {
@@ -181,6 +197,7 @@ button.home, button.genre, button.random {
 
 /* Main */
 main {
+    grid-area: main;
     margin-top: 10px;
 }
 main h2 {
@@ -194,7 +211,7 @@ main h3 {
 main img {
     width: 60%;
     margin: auto;
-    border: black 20px solid;
+    border: rgb(255, 255, 255) 20px solid;
     margin-top: 30px;
 }
 main p {
@@ -202,35 +219,65 @@ main p {
 }
 main p.dott {
     margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 main p.hela {
     display: none;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 main .button {
     display: flex;
     flex-direction: row;
     gap: 40px;
+    margin: auto;
+    width: fit-content;
 }
 main button {
     margin-top: 30px;
+    padding: 15px;
+    border: black dotted 1px;
+    border-radius: 40px;
 }
 main .chapter {
     margin-top: 30px;
 }
+main .capter {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.179);
+    background-color: #e7e7e7;
+}
 main .chapter a {
-    margin-top: 30px;
+    text-align: start;
+}
+main .chapter p {
+    flex-direction: row-reverse;
+    text-align-last:end ;
+    margin-left: auto;
 }
 
 /* Footer */
 footer {
+    grid-area: footer;
     margin-top: 40px;
-    padding: 20px;
-    background: #f4f4f4;
+}
+footer h3 {
+    text-align: center;
+}
+footer .info {
+    margin: 20px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    border: 2px solid black;
-    border-radius: 10px;
+    margin-bottom: 20px;
+}
+footer .info p {
+    margin: auto;
 }
 
 /* Anpassning för iPad och större (Tablet/Desktop) */
@@ -240,5 +287,13 @@ footer {
     }
 }
 @media (min-width: 1024px ) {
-    .sida {}
+    .sida {
+        max-width: 800px;
+    }
+    p.dott {
+        display: none;
+    }
+    p.hela {
+        display: block;
+    }
 }
